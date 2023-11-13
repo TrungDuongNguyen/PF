@@ -76,3 +76,50 @@ nav ul li a:hover::after{
 .header-text p{
     color: aqua;
 }
+
+#About{
+    padding: 80px 0;
+    color: aqua;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 30%;
+
+
+}
+.about-col-1 img{
+ 
+    width: 80%;
+    border-radius: 35px;
+
+}
+
+.about-col-2{
+    flex-basis: 30%;
+
+
+}
+.about-col-2 img{
+ 
+    width: 80%;
+    border-radius: 35px;
+
+}
+
+.about-col-3{
+    flex-basis: 30%;
+
+
+}
+.about-col-3 img{
+ 
+    width: 80%;
+    border-radius: 35px;
+
+}
