@@ -7,7 +7,7 @@
 }
 body{
     background: #fff;
-    color:#1316c7;
+    color:#d9d9e6;
 
 }
 #header{
@@ -16,4 +16,63 @@ body{
     background-image: url(image-links/86BG.jpg);
     background-size: cover;
     background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+}
+
+.logo{
+    width: 150px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type:none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+    color:beige;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.header-text{
+    margin-top:10%;
+    font-size:30px;
+
+}
+
+.header-text h1{
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+.header-text p{
+    color: aqua;
 }
