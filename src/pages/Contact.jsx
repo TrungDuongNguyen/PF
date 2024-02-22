@@ -6,46 +6,49 @@ import Loader from '../components/Loader';
 
 
 const Contact = () => {
-const[form, setForm] = useState({name:'',email:'',message:''})
-const[isLoading, setisLoading] = useState(false);
-const formRef= useRef(null);
+  const[form, setForm] = useState({name:'',email:'',message:''})
+  const[isLoading, setisLoading] = useState(false);
+  const formRef= useRef(null);
+  const[currentAnimation, setCurrentAnimation] = useState('idle')
 
-const handleChange=(e)=>{
-  setForm({ ...form,[e.target.name]: e.target.value})
-};
+  const handleChange=(e)=>{
+    setForm({ ...form,[e.target.name]: e.target.value})
+  };
 
-const handleSubmit=(e) => {
-  e.preventDefault();
-  setisLoading(true);
+  const handleSubmit=(e) => {
+    e.preventDefault();
+    setisLoading(true);
+    setCurrentAnimation('hit');
 
-  console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID)
+    console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID)
 
-  emailjs.send(
-    import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-    import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    {
-      from_name: form.name,
-      to_name: "Trung-Duong Nguyen",
-      from_email: form.email,
-      to_email: "trungduong23@gmail.com",
-      message: form.message,
-    },
-    import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-  ).then(() =>{
-    setisLoading(false);
-    // TODO:Show success msg
-    // TODO hide an alert 
-    setForm({ name: '', email: '', message: ''});
-  }).catch((error) => {
-    setisLoading(false);
-    console.log(error);
-    //todo show error msg
-  })
-}
+    emailjs.send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "Trung-Duong Nguyen",
+        from_email: form.email,
+        to_email: "trungduong23@gmail.com",
+        message: form.message,
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+    ).then(() =>{
+      setisLoading(false);
+      // TODO:Show success msg
+      // TODO hide an alert 
+      setForm({ name: '', email: '', message: ''});
+    }).catch((error) => {
+      setisLoading(false);
+      setCurrentAnimation('idle');
+      console.log(error);
+      //todo show error msg
+    })
+  }
 
 
-  function handleFocus() { }
-const handleBlur=()=>{};
+    const handleFocus = () => setCurrentAnimation('walk');
+    const handleBlur=()=> setCurrentAnimation('idle');
 
 
   return (
@@ -124,6 +127,7 @@ const handleBlur=()=>{};
           <ambientLight intensity={0.3} />
           <Suspense fallback={<Loader />}>
             <Fox
+              currentAnimation={currentAnimation}
               position={[0.05,0.35,0]}
               rotation={[12.8,-0.6,0]}
               scale={[0.5,0.5,0.5]}

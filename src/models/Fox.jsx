@@ -17,6 +17,7 @@ const Fox = ({ currentAnimation, ...props}) => {
   const { actions } = useAnimations(animations, group);
 
   useEffect(()=>{
+    console.log(actions)
 
   },[actions,currentAnimation])
   return (
