@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, water, FAU, SFWMD, sysA } from "../assets/images";
 import {
     car,
     contact,
@@ -67,11 +67,8 @@ export const skills = [
         name: "Motion",
         type: "Animation",
     },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
+ 
+
     {
         imageUrl: nextjs,
         name: "Next.js",
@@ -92,74 +89,75 @@ export const skills = [
         name: "Redux",
         type: "State Management",
     },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
+  
+
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
         type: "Frontend",
     },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
+
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Water Resources Utility Intern",
+        company_name: "Fort Pierce Utility Authority",
+        icon: water,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "January 2012 - April 2012",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Organized engineering schematics related to the database",
+            "Collaborating with cross-functional teams including engineers, project managers, and other contractors to create high-quality products.",
+
+
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "University Teaching Assistant",
+        company_name: "Florida Atlantic University",
+        icon: FAU,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Jan 2013 - Feb 2014",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Provided academic support to students through lectures and information sessions",         
+            "Regulated lab procedures and organized academic curriculum",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Engineering Project Management Intern",
+        company_name: "South Florida Water Management District",
+        icon: SFWMD,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "January 2015 - June 2015",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Worked on multiple hydraulic operations projects concurrently",
+            "Ensured database consistency between design and implementation",
+
+        ],
+    },
+    {
+      title: "E-Commerce Operations",
+      company_name: "SysA Ind",
+      icon: sysA,
+      iconBg: "#b7e4c7",
+      date: "Jan 2020 - Jan2021",
+      points: [
+          "Facilitated sales with volumes of thousands of merchandise per month",
+          "Applied technical research to determine efficient ways to boost sales and customer outreach",
+         
+      ],
+  },
+    {
+        title: "Hardware Operations Specialist",
+        company_name: "SysA Ind",
+        icon: sysA,
+        iconBg: "#b7e4c7",
+        date: "Jan 2021 - Present",
+        points: [
+            "Implemented operation procedures for a multi server financial business",
+            "Updated security protocols and installed new software to ensure stability",
+           
         ],
     },
 ];
