@@ -15,13 +15,13 @@ const Plane = ({isRotating, ...props}) => {
     } else {
       actions['Take 001'].stop();
     }
-    }, [actions, isRotating])
+    }, [actions, isRotating]);
 
   return (
     <mesh {...props} ref={ref}>
       <primitive object={scene} />
     </mesh>
-  )
+  );
 }
 
 export default Plane

@@ -147,7 +147,7 @@ const Contact = () => {
               currentAnimation={currentAnimation}
               position={[0.05,0.35,0]}
               rotation={[12.8,-0.6,0]}
-              scale={[0.5,0.5,0.5]}
+              scale={[0.4,0.4,0.4]}
             />
 
           </Suspense>
