@@ -37,7 +37,12 @@ const Contact = () => {
       setisLoading(false);
       // TODO:Show success msg
       // TODO hide an alert 
-      setForm({ name: '', email: '', message: ''});
+      setTimeout(() => {
+        setCurrentAnimation('idle')
+        setForm({ name: '', email: '', message: ''});
+      }, [3000]);
+
+
     }).catch((error) => {
       setisLoading(false);
       setCurrentAnimation('idle');
